@@ -1,0 +1,20 @@
+site_name: Monologue documentation
+site_descritpion: 'Official documentation for Monologue'
+site_url: !ENV READTHEDOCS_CANONICAL_URL
+
+repo-name: atomic-junky/Monologue
+repo-url: https://github.com/atomic-junky/Monologue
+
+theme:
+  name: lantana
+  locale: en
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+
+extra-css:
+  - css/readthedocs.css
+
+extra_javascript:
+  - javascript/readthedocs.js

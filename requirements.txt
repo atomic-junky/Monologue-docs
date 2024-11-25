@@ -1,2 +1,2 @@
-mkdocs==1.6.0
-lantana==2.12.1
+mkdocs==1.6
+mkdocs-material==9.5

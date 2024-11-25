@@ -2,19 +2,114 @@ site_name: Monologue documentation
 site_descritpion: 'Official documentation for Monologue'
 site_url: !ENV READTHEDOCS_CANONICAL_URL
 
-repo-name: atomic-junky/Monologue
-repo-url: https://github.com/atomic-junky/Monologue
+repo_url: https://github.com/atomic-junky/Monologue
+repo_name: atomic-junky/Monologue
 
 theme:
-  name: lantana
-  locale: en
+  name: material
+  custom_dir: overrides
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    # - content.code.annotate
+    # - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/icon.png
+  logo: assets/icon.png
+  icon:
+    repo: fontawesome/brands/github
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
 
 nav:
-  - Home: index.md
-  - Getting Started: getting-started.md
+  - Getting Started:
+    - Introduction: index.md
+    - Installation: installation.md
+    - Features: features.md
+    - Tutorials:
+      - Basics:
+        - 1. Sentences: placehodler.md
+        - 2. Choices: placehodler.md
+        - 3. Characters: placehodler.md
+        - 4. Background: placehodler.md
+        - 5. Audio: placehodler.md
+      - Advanced:
+        - 1. Variables and Conditions: placehodler.md
+        - 2. More advanced options: placehodler.md
+        - 3. Expressions: placeholder.md
+        - 4. Events: placehodler.md
+        - 5. Bridge: placehodler.md
+        - 6. Scene background: placehodler.md
+        - 7. Audio layers: placehodler.md
+        - 8. Animation: placehodler.md
+        - 9. Helpers: placehodler.md
+    
+  - User Manual:
+    - Introduction: user-manual/index.md
+    - Editor:
+      - User Interface: user-manual/editor/user-interface.md
+    - Graph Nodes:
+      - Sentence: user-manual/nodes/node_sentence.md
+      - Options: user-manual/nodes/node_sentence.md
+    - Executing:
+      - Introduction: user-manual/executing/index.md
+  - Developer Docs:
+    - Introduction: developer-docs/index.md
+  - Release Notes:
+    - 3.0 (dev): release-notes/3_0.md
 
-extra-css:
-  - css/readthedocs.css
-
-extra_javascript:
-  - javascript/readthedocs.js
+extra_css:
+  - stylesheets/extra.css
